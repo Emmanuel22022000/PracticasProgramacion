@@ -1,4 +1,4 @@
-/*Practica 07                                  Nombre: Hern·ndez Ayala Oscar Emmanuel
+/*Practica 07                                  Nombre: Hern√°ndez Ayala Oscar Emmanuel
 Fecha: 22 de Noviembre del 2020*/
 
 #include<stdio.h>
@@ -34,6 +34,6 @@ int main(){
 	scanf("%d",&t);
 	D=t*V;
 	printf("\n\t\vLa distancia sera de: \n\t %f{m/s}",D);
-	printf("\n\n\t\bBuen viaje \n\tc:");  //Mensaje de despedida
+	printf("\n\n\tBuen viaje \n\tc:");  //Mensaje de despedida
 	return 0;
 }
