@@ -1,0 +1,39 @@
+/*Practica 07                                  Nombre: Hernández Ayala Oscar Emmanuel
+Fecha: 22 de Noviembre del 2020*/
+
+#include<stdio.h>
+//Programa para obtener la velocidad en un recorrido del punto A al punto B y saber cuanto tiempo se tardara en recorrer cierta distancia .
+float A;
+double B;
+float C; 
+int t;
+double V;
+float D;
+char Format01=65;
+char Format02=66;
+/*Tuve que daclarar cada 
+variable por separado ya que
+si las de el mismo tipo las 
+ponia en el mismo TipoDe Variable
+no me imprimia las varibles*/ 
+int main(){
+	printf("\b%c ",Format01);                                       
+	printf("Distancia inicial {m} ");                    
+	scanf("%f",&A);                                      
+	printf("\a%c ",Format02);
+	printf("Distancia final {m} ");
+	scanf("%lf",&B);
+	printf("Tiempo del reccorido en numeros enteros {s} ");
+	scanf("%i",&t);
+	/*En esta parte solicitaremos 
+	la infomacion necesaria
+	para obtener nuestros relustados*/
+	V=(B-A)/t;
+	printf("\n\t\vLa velocidad de su objeto es de: \n\t%f{m/s}",V);
+	printf("\n\nTiempo del viaje que deseas recorrer en numeros enteros{s}: ");
+	scanf("%d",&t);
+	D=t*V;
+	printf("\n\t\vLa distancia sera de: \n\t %f{m/s}",D);
+	printf("\n\n\t\bBuen viaje \n\tc:");  //Mensaje de despedida
+	return 0;
+}
