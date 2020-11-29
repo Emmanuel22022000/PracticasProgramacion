@@ -1,0 +1,93 @@
+/*
+  Practica08    Nombre; Hernández Ayala Oscar Emmanuel
+  Fecha:28 de Nomviembre del 2020
+*/
+
+
+//Menu para seleccionar el programa que deseemos usar
+#include<stdio.h>
+int main(){
+	int n,d,a;
+	float N,c,q,R,p,z,y,x;
+	enum Problemas {A=1,B,C,D,F};
+	printf("Selecona el problema :");
+	printf("\nProblema 1\n");
+	printf("Problema 2\n");
+	printf("Problema 3\n");
+	printf("Problema 4\n");
+	printf("Problema 5\n\n");
+	scanf("%d",&n);
+	switch (n){
+		case A:
+			printf("\n1.-Algoritmo para determinar si un numero es positivo o negativo.\n");
+			printf("\nIntroduce el numero a evaluar: ");
+	        scanf("%f",&N);
+	        if (N==0){
+	            printf("Su numero es cero");
+	        } else{ 
+	        if (N>0){
+	            printf("%.2lf es positivo",N);
+	        } else{
+	            printf("%.2f es negativo",N);
+	        }
+            }
+			break;
+		case B:
+			printf("\n2.-Algoritmo para determinar cuanto se debe pagar por equis cantidad de lapices\nconsiderando que si son 1000 o mas el costo es de 85 centavos, de lo contrario, el precio es de 90 centavos.\n");
+			printf("\n\nCantidad de lapices comprados \n");
+			scanf("%d",&d);
+			if (d>100){
+			    c=(float)(d*85)/100;  //cast				
+        	} else{
+	    	    c=(float)(d*90)/100;  //cast
+        	}
+	        printf("\n\nEl precio de los lapices es de \n%.2f pesos",c);
+			break;
+		case C:
+			    printf("\n3.-Un almacen tiene una promocion: a todos los trajes que tienen\nun precio superior a $2500.00 se les aplicara un descuento del 15 porcieto,\na todos los demas se les aplicara solo 8 porciento.\nRealice un algoritmo para determinar el precio final que debe pagar una persona por comprar un traje y de cuanto es el descuento que obtendra.\n");
+                printf("\nPrecio del traje: ");
+	            scanf("%f",&q);
+		        if (q>2500){
+		        	R=q*0.15;
+	            } else{
+	            	R=q*0.08;
+	            }
+                p=q-R;
+            	printf("El precio total del traje es de:\n\tPrecio: %.2lf\n\tDescuento %f\n",q,R);
+            	printf("--------------------------\n");
+	            printf("Total: %lf",p);
+			break;
+		case D:
+			printf("\n4.-Se requiere determinar cuál de tres cantidades proporcionadas es la mayor.\n");
+            printf("\nEscribe la primer cantidad ");
+        	scanf("%f",&z);
+            printf("Escribe la segunda cantidad ");
+            scanf("%f",&y);
+        	printf("Escribe la tercera cantidad ");
+        	scanf("%f",&x);	
+        	if(z>y){
+        		z>x ? printf("\n%.2f es mayor",z):printf("\n%.2f es mayor",x);	
+        	} else{
+        		y>x ? printf("\n%.2f es mayor",y):printf("\n%.2f es mayor",x);		
+        	} 
+			break;
+		case F:
+			printf("\n5.-El director de una escuela esta organizando un viaje de estudios, y\nrequiere determinar cuanto debe cobrar a cada alumno y cuanto debe pagar\na la compañia de viajes por el servicio. La forma de cobrar es la\nsiguiente: si son 100 alumnos o mas, el costo por cada alumno es de\n65.00 pesos; de 50 a 99 alumnos, el costo es de $70.00, de 30 a 49,\nde 95.00 pesos, y si son menos de 30, el costo de la renta del autobus\nes de 4000.00 pesos, sin importar el numero de alumnos.\nRealice un algoritmo que permita determinar el pago a la compañia de\nautobuses y lo que debe pagar cada alumno por el viaje.\n");   
+        	printf("\nNumero de alumnos: ");
+        	scanf("%d",&a);
+        	if (a>=30){
+        		if(a>=50){
+            			a>=100 ? (d=a*65):(d=a*70);
+        		} else{
+        			d=a*95;
+        		} 
+        	} else{
+        			d=4000;
+        	}
+        	printf("\nEl costo del viaje sera de %d pesos",d);
+			break;
+		default:
+			printf("Su opcion no es valida");
+	}
+	return 0;
+}
