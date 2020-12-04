@@ -1,0 +1,99 @@
+/* 
+   Practica09                      Nombre: Hernández Ayala Oscar Emmanuel
+   Fecha: 03 de Diciembre del 2020
+*/
+
+#include<stdio.h>
+int main(){
+	float d,s,a;
+	int p,i=1;
+	for(int m=1;m<=12;m++){
+		printf("\tCodigo01\nNumero de depositos que se haran este mes ");
+		scanf("%d",&p);
+		if(p==0){
+			i=1;
+		} else{
+		do{
+			printf("Cantidad del deposito ");
+			scanf("%f",&d);
+			s+=d;
+			i++;
+		}while(i<=p);
+		printf("\nEste mes ahorraste %.2f pesos\n\n\n",s);
+		a+=s;
+		s=0;
+		i=1;
+		}
+	}
+	printf("----------------------------\nUsted ahorro %.2f en el año\n\n",a);
+	P2();
+	return 0;
+}
+
+int P2(){
+	int s,n=0,p=0,c=1;
+	float l;
+	printf("\n\tCodigo02\nCantidad de numero que se introduciran\n");
+	scanf("%d",&s);
+	while(c<=s){
+		printf("Cantidad ");
+		scanf("%f",&l);
+		if(l<=0){
+			n++;
+			c++;
+		} else{
+			p++;
+			c++;
+		}
+	}
+	printf("\n\tHay %d numeros menores o iguales a cero",n);
+	printf("\n\tHay %d numeros mayores a cero\n\n",p);
+	P3();
+	return 0;
+}
+
+int P3(){
+	enum{A,B,C};
+	int o;
+	printf("\n\tCodigo03\nForma 1\n");
+	printf("Forma 2\n");
+	printf("Forma 3\n\n");
+	scanf("%d",&o);
+	switch(o){
+		case 1:
+			FormaA();
+			break;
+		case 2:
+			FormaB();
+			break;
+		case 3:
+			FormaC();
+			break;
+	}
+	return 0;
+}
+
+int FormaA(){
+	int n=0;
+	while(n<100){
+		n=n+2;
+		printf("%d\n",n);
+	} 
+	return 0;
+}
+
+int FormaB(){
+	int n=0;
+	do{
+		n=n+2;
+		printf("%d\n",n);
+	} while(n<100); 
+	return 0;
+}
+
+int FormaC(){
+	for(int n=0;n<=100;n+=2){
+		printf("%d\n",n);
+	}
+	return 0;
+}
