@@ -1,0 +1,58 @@
+/*
+
+    Practica 10                          Nombre: Hernández Ayala Oscar Emmanuel
+    Fecha: 11 de Diciembre del 2020
+*/
+
+#include<stdio.h>
+#include <math.h>
+void main(){
+	int N, CONT, AS;
+    AS=0;
+    CONT=1;
+    printf("TECLEA UN NUMERO: ");
+    scanf("%i",&N);
+    while(CONT<=N){
+    	AS=(AS+CONT);
+        CONT=(CONT+2);
+	}
+    printf("\nEL RESULTADO ES %i\n", AS);
+    E2();
+}
+
+void E2(){
+	int i, j;
+    for(i=1; i<10; i++){
+    	printf("\nTabla del %i\n", i);
+    	/*
+    	Se cambio j==10 a j<=10 pues si se deja j==10 el for jamas se hara
+    	ya que j siempre valdra 1 y jamás sera igual a 10, por lo que la condicion 
+    	jamas se cumplira y el for no se hara. Ya que 1 es menor que 10 el for ahora i se cumple
+    	*/
+        for(j=1; j<=10; j++){
+        	printf("%i X %i = %i\n", i, j, i*j);
+        }
+    }
+    E3();
+}
+
+void E3(){
+	int K, X, AP, N;
+	float AS;
+	printf("\n\nEL TERMINO GENERICO DE LA SERIE ES: X^K/K!");
+	printf("\nN=");
+	//Falto escribir el "&" en el scanf para guardar el valor en la variable N
+	scanf("%d",&N);
+	printf("X=");
+	//Falto escribir el "&" en el scanf para guardar el valor en la variable X
+	scanf("%d",&X);
+	K=0;
+	AP=1;
+	AS=0;
+	while(K<=N){
+		AS=AS+pow(X,K)/AP;
+		K=K+1;
+		AP=AP*K;
+	}
+	printf("SUM=%le",AS);
+}
