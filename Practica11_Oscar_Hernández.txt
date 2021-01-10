@@ -1,11 +1,14 @@
+/* Practica 11          Hern√°ndez Ayala Oscar Emmanuel
+   Fecha: 10/Ene/2021                                    */
+
 #include <stdio.h>
 int P2(),P3(),P4();
 /*
-Este programa trabaja con aritmÈtica de apuntadores para acceder a los
+Este programa trabaja con aritm√©tica de apuntadores para acceder a los
 valores de un arreglo.
 */
 int main () {
-	//Declaracion de un arreglo de tamaÒo indefinido
+	//Declaracion de un arreglo de tama√±o indefinido
     int arr[] = {5, 4, 3, 2, 1};
     //Declaracion de un apuntador tipo entero
     int *apArr;
@@ -28,13 +31,13 @@ int main () {
 
 /*
 Este programa genera un arreglo unidimensional de 5 elementos y
-accede a cada elemento del arreglo a travÈs de un apuntador
+accede a cada elemento del arreglo a trav√©s de un apuntador
 utilizando un ciclo for.
 */
 int P2(){
-	//Definimos la palabra "TamaÒo" como el valor 5
+	//Definimos la palabra "Tama√±o" como el valor 5
     #define TAMANO 5
-    //Declaramos un arreglo de tamaÒo 5
+    //Declaramos un arreglo de tama√±o 5
     int lista[TAMANO] = {10, 8, 5, 8, 7};
     //Declaramos un apuntador llamado ap y le asignamos la direccion del arreglo lista
     int *ap = lista;
@@ -43,7 +46,7 @@ int P2(){
     for (int indice = 0 ; indice < 5 ; indice++){
     	/*Sumamos uno a la variable indice para mostrarlo como
     	el pimero elemento del arreglo y con el valor del mismo*/
-        printf("\nCalificaciÛn del alumno %d es %d", indice+1, *(ap+indice));
+        printf("\nCalificaci√≥n del alumno %d es %d", indice+1, *(ap+indice));
     }
     printf("\n");
     P3();
@@ -54,7 +57,7 @@ int P2(){
 Este programa muestra el manejo de cadenas en lenguaje C.
 */
 int P3(){
-	//Declaramos un arrreglo de tipo caracter de tamaÒo 20
+	//Declaramos un arrreglo de tipo caracter de tama√±o 20
     char palabra[20];
     int i=0;
     printf("Ingrese una palabra: ");
@@ -70,11 +73,11 @@ int P3(){
 }
 
 /* Este programa genera un arreglo de dos dimensiones (arreglo
-multidimensional) y accede a sus elementos a travÈs de un apuntador utilizando
+multidimensional) y accede a sus elementos a trav√©s de un apuntador utilizando
 un ciclo for.
 */
 int P4(){
-	//Declaramos una arreglo multidimensional de tamaÒo 3x3 con el valor de cada indice
+	//Declaramos una arreglo multidimensional de tama√±o 3x3 con el valor de cada indice
     int matriz[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
     //Declaramos dos variables y un apuntador tipo entero
     int i, cont=0, *ap;
@@ -88,7 +91,7 @@ int P4(){
             printf("\n");
             cont = 0;
         }
-        //Imprime el valor del apuntador m·s i, el (ap+1) permite que cada ciclo se vaya azanzando de indice de la matriz
+        //Imprime el valor del apuntador m√°s i, el (ap+1) permite que cada ciclo se vaya azanzando de indice de la matriz
         printf("%d\t",*(ap+i));
         cont++;
     }
